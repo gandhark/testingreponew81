@@ -1,0 +1,9 @@
+Jmeter_Version=2.13
+Jmeter_Path=/usr/share/jmeter
+
+RUN mkdir -p $JMETER_PATH && cd $JMETER_PATH 
+RUN apt-get -y install wget
+wget http://www.gtlib.gatech.edu/pub/apache//jmeter/binaries/apache-jmeter-$Jmeter_Version.tgz
+RUN tar -zxf apache-jmeter-2.13.tgz
+RUN apt-get install -y unzip
+
